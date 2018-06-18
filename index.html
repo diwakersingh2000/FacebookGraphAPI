@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment | Level 3 - jQuery | By Diwaker</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link href="css/root.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="loading"><img src="img/loading.gif" alt="loading-img"></div>
+    <div id="top" class="clearfix">
+      <div class="applogo">
+        <a href="index.html" class="logo">Facebook</a>
+      </div>
+      <a href="#" class="sidebar-open-button"><i class="fa fa-bars"></i></a>
+      <a href="#" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a>
+      <form class="searchform">
+        <input type="text" class="searchbox" id="searchbox" placeholder="Search">
+        <span class="searchbutton"><i class="fa fa-search"></i></span>
+      </form>
+      <ul class="top-right">
+        <li class="link">
+          <a href="#" class="notifications">0</a>
+        </li>
+        <li class="dropdown link">
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="" class="myImage" alt="img"><b><span class="myName"></span></b><span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right">
+            <li role="presentation" class="dropdown-header">Options</li>
+            <li><a href="profile.html"><i class="fa falist fa-user"></i>Profile<span class="badge label-success">NEW</span></a></li>
+            <li><a href="#"><i class="fa falist fa-inbox"></i>Inbox</a></li>
+            <li><a href="#"><i class="fa falist fa-cog"></i>Settings</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="fa falist fa-power-off"></i> Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar clearfix">
+      <ul class="sidebar-panel nav">
+        <li><a href="index.html" ><span class="icon color6"><i class="fa fa-newspaper-o"></i></span>Feed Page/ Timeline<span class="label label-danger">NEW</span></a></li>
+        <li><a href="posts.html" ><span class="icon color6"><i class="fa fa-align-left"></i></span>Posts Made by Me<span class="label label-danger">NEW</span></a></li>
+        <li><a href="profile.html" ><span class="icon color6"><i class="fa fa-user"></i></span>Profile<span class="label label-danger">NEW</span></a></li>
+        <li><a href="#" onclick="return false;"><span class="icon color7"><i class="fa fa-envelope-o"></i></span>Messages</a></li>
+        <li><a href="#" onclick="return false;"><span class="icon color8"><i class="fa fa-calendar"></i></span>Events<span class="label label-default">7</span></a></li>
+        <li><a href="#" onclick="return false;"><span class="icon color9"><i class="fa fa-camera"></i></span>Photos<span class="caret"></span></a>
+          <ul>
+            <li><a href="#" onclick="return false;">Upload</a></li>
+            <li><a href="#" onclick="return false;">Your Photos</a></li>
+            <li><a href="#" onclick="return false;">Tagged Photos</a></li>
+          </ul>
+        </li>
+        <li><a href="#" onclick="return false;"><span class="icon color10"><i class="fa fa-user-plus"></i></span>Discover People</a></li>
+        <li><a href="#" onclick="return false;"><span class="icon color11"><i class="fa fa-diamond"></i></span>Friends</a></li>
+        <li><a href="#" onclick="return false;"><span class="icon color8"><i class="fa fa-map-marker"></i></span>Nearby Places</a></li>
+        <li><a href="#" onclick="return false;"><span class="icon color12"><i class="fa fa-file"></i></span>Liked Pages<span class="label label-default">26</span></a></li>
+        <li><a href="#" onclick="return false;"><span class="icon color12"><i class="fa fa-cog"></i></span>Settings</a></li>
+      </ul>
+      <ul class="sidebar-panel nav">
+        <li class="sidetitle">Groups</li>
+        <li><a href="#" onclick="return false;"><span class="icon color15"><i class="fa fa-users"></i></span>Hacking team</a></li>
+        <li><a href="#" onclick="return false;"><span class="icon color7"><i class="fa fa-plus"></i></span>Create Group</a></li>
+      </ul>
+      <div class="sidebar-plan">
+        Profile progress
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+        </div>
+        <span class="space">60%</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="container-no-padding">
+        <div class="social-profile">
+          <div class="social-top">
+            <div class="profile-left">
+              <img src="" alt="img" class="profile-img myImage">
+              <h1 class="name">
+                <span class="myName"></span>
+              </h1>
+              <p class="profile-text">Timeline</p>
+            </div>
+            <ul class="social-stats">
+              <li><b>462</b>Followers</li>
+              <li><b>123</b>Photos</li>
+              <li><b>52</b>Videos</li>
+            </ul>
+          </div>
+          <div class="social-content clearfix">
+            <div class="col-lg-12">
+
+
+              <!-- This is the button which is being automatically clicked by the script written in the end of this HTML  -->
+              <a id="facebookNewsFeedBtn" href="#"></a>
+
+
+
+              <div class="panel panel-default">
+                <div class="panel-body status">
+                  <ul class="panel-tools panel-tools-hover">
+                  </ul>
+                  <div class="who clearfix">
+                    <img src="" alt="profileImg" class="myImage">
+                    <span class="name myName"></span>
+                    <span class="from">Posted on <span class="myNF1Time"></span></span>
+                  </div>
+                  <div class="text">
+                    <p><span class="myNF1Message"></span></p>
+                    <p><span class="myNF1Story"></span></p>
+                  </div>
+                  <ul class="links">
+                    <li><a href="#" onclick="return false;"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-comment-o"></i> Comment</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-share-square-o"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-body status">
+                  <ul class="panel-tools panel-tools-hover">
+                  </ul>
+                  <div class="who clearfix">
+                    <img src="" class="myImage" alt="img">
+                    <span class="name myName"></span>
+                    <span class="from">Posted on <span class="myNF2Time"></span></span>
+                  </div>
+                  <div class="text">
+                    <p><span class="myNF2Story"></span></p>
+                    <p><span class="myNF2Message"></span></p>
+                  </div>
+                  <ul class="links">
+                    <li><a href="#" onclick="return false;"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-comment-o"></i> Comment</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-share-square-o"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-body status">
+                  <ul class="panel-tools panel-tools-hover">
+                  </ul>
+                  <div class="who clearfix">
+                    <img src="" class="myImage" alt="img">
+                    <span class="name myName"></span>
+                    <span class="from">Posted on <span class="myNF3Time"></span></span>
+                  </div>
+                  <div class="text">
+                    <p><span class="myNF3Story"></span></p>
+                    <p><span class="myNF3Message"></span></p>
+                  </div>
+                  <ul class="links">
+                    <li><a href="#" onclick="return false;"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-comment-o"></i> Comment</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-share-square-o"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-body status">
+                  <ul class="panel-tools panel-tools-hover">
+                  </ul>
+                  <div class="who clearfix">
+                    <img src="" class="myImage" alt="img">
+                    <span class="name myName"></span>
+                    <span class="from">Posted on <span class="myNF4Time"></span></span>
+                  </div>
+                  <div class="text">
+                    <p><span class="myNF4Story"></span></p>
+                    <p><span class="myNF4Message"></span></p>
+                  </div>
+                  <ul class="links">
+                    <li><a href="#" onclick="return false;"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-comment-o"></i> Comment</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-share-square-o"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-body status">
+                  <ul class="panel-tools panel-tools-hover">
+                  </ul>
+                  <div class="who clearfix">
+                    <img src="" class="myImage" alt="img">
+                    <span class="name myName"></span>
+                    <span class="from">Posted on <span class="myNF5Time"></span></span>
+                  </div>
+                  <div class="text">
+                    <p><span class="myNF5Story"></span></p>
+                    <p><span class="myNF5Message"></span></p>
+                  </div>
+                  <ul class="links">
+                    <li><a href="#" onclick="return false;"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-comment-o"></i> Comment</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-share-square-o"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-body status">
+                  <ul class="panel-tools panel-tools-hover">
+                  </ul>
+                  <div class="who clearfix">
+                    <img src="" class="myImage" alt="img">
+                    <span class="name myName"></span>
+                    <span class="from">Posted on <span class="myNF6Time"></span></span>
+                  </div>
+                  <div class="text">
+                    <p><span class="myNF6Story"></span></p>
+                    <p><span class="myNF6Message"></span></p>
+                  </div>
+                  <ul class="links">
+                    <li><a href="#" onclick="return false;"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-comment-o"></i> Comment</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-share-square-o"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-body status">
+                  <ul class="panel-tools panel-tools-hover">
+                  </ul>
+                  <div class="who clearfix">
+                    <img src="" class="myImage" alt="img">
+                    <span class="name myName"></span>
+                    <span class="from">Posted on <span class="myNF7Time"></span></span>
+                  </div>
+                  <div class="text">
+                    <p><span class="myNF7Story"></span></p>
+                    <p><span class="myNF7Message"></span></p>
+                  </div>
+                  <ul class="links">
+                    <li><a href="#" onclick="return false;"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-comment-o"></i> Comment</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-share-square-o"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-body status">
+                  <ul class="panel-tools panel-tools-hover">
+                  </ul>
+                  <div class="who clearfix">
+                    <img src="" class="myImage" alt="img">
+                    <span class="name myName"></span>
+                    <span class="from">Posted on <span class="myNF8Time"></span></span>
+                  </div>
+                  <div class="text">
+                    <p><span class="myNF8Story"></span></p>
+                    <p><span class="myNF8Message"></span></p>
+                  </div>
+                  <ul class="links">
+                    <li><a href="#" onclick="return false;"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-comment-o"></i> Comment</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-share-square-o"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-body status">
+                  <ul class="panel-tools panel-tools-hover">
+                  </ul>
+                  <div class="who clearfix">
+                    <img src="" class="myImage" alt="img">
+                    <span class="name myName"></span>
+                    <span class="from">Posted on <span class="myNF9Time"></span></span>
+                  </div>
+                  <div class="text">
+                    <p><span class="myNF9Story"></span></p>
+                    <p><span class="myNF9Message"></span></p>
+                  </div>
+                  <ul class="links">
+                    <li><a href="#" onclick="return false;"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-comment-o"></i> Comment</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-share-square-o"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-body status">
+                  <ul class="panel-tools panel-tools-hover">
+                  </ul>
+                  <div class="who clearfix">
+                    <img src="" class="myImage" alt="img">
+                    <span class="name myName"></span>
+                    <span class="from">Posted on <span class="myNF10Time"></span></span>
+                  </div>
+                  <div class="text">
+                    <p><span class="myNF10Story"></span></p>
+                    <p><span class="myNF10Message"></span></p>
+                  </div>
+                  <ul class="links">
+                    <li><a href="#" onclick="return false;"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-comment-o"></i> Comment</a></li>
+                    <li><a href="#" onclick="return false;"><i class="fa fa-share-square-o"></i> Share</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row footer">
+        <div class="col-md-6 text-left">
+          Copyright © 2017 <a href="https://diwakersingh2000.github.io/portfolio/" target="_blank">Diwaker Singh</a> All rights reserved.
+        </div>
+      </div>
+    </div>
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript File -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin.js - Some Specific JS codes for Plugin Settings -->
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <!-- Script to click this button automatically -->
+    <!-- This button is actually hidden, its a link, with no text -->
+    <script>
+    jQuery(function(){
+      jQuery('#facebookNewsFeedBtn').click();
+    });
+    </script>
+  </body>
+</html>
